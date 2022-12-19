@@ -46,4 +46,12 @@ elementToDelete.forEach(element => element.remove())
 //? 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. 
 //? 	Recuerda que no solo puedes insertar elementos con .appendChild.
 
+const pInTheMiddle = document.createElement("p")
+pInTheMiddle.textContent = 'Voy en medio!'
+
+//selecciono todos los div y los paso a Array. Me guardo en la variable solo el de indice[1] que es el 2do elemento
+const secondDiv = Array.from(document.querySelectorAll("div.fn-insert-here"))[1] 
+console.log(secondDiv)
+document.body.insertBefore(pInTheMiddle ,secondDiv)
+
 //? 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
