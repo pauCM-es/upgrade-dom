@@ -16,7 +16,9 @@ for (let i = 0; i < 6; i++) {
 document.body.append(newDiv3)
 
 //? 2.4 Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'.
-
+let pDinamic = document.createElement("p")
+pDinamic.textContent = "Soy dinamico!!"
+document.body.append(pDinamic)
 
 //? 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.
 
