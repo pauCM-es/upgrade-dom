@@ -9,7 +9,11 @@ newDiv2.appendChild(newP)
 document.body.append(newDiv2)
 
 //? 2.3 Inserta dinamicamente en un html un div que contenga 6 p utilizando un loop con javascript.
-
+const newDiv3 = document.createElement("div")
+for (let i = 0; i < 6; i++) {
+  newDiv3.appendChild(document.createElement("p"))
+}
+document.body.append(newDiv3)
 
 //? 2.4 Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'.
 
