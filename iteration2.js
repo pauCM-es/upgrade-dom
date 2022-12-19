@@ -39,6 +39,9 @@ document.body.append(newUl)
 console.log(newUl)
 
 //? 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
+const elementToDelete = Array.from(document.querySelectorAll(".fn-remove-me"))
+console.log (elementToDelete)
+elementToDelete.forEach(element => element.remove())
 
 //? 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. 
 //? 	Recuerda que no solo puedes insertar elementos con .appendChild.
