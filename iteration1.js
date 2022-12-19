@@ -16,8 +16,23 @@ console.log(pokemon$$)
 
 //? 1.5 Usa querySelector para mostrar por consola todos los elementos con el atributo 
 //? data-function="testMe"
-const elements = Array.from(document.querySelectorAll("span"))
-console.log(elements)
+//* opcion 1. Usando los <span> como selector
+// const elements = Array.from(document.querySelectorAll("span"))
+// console.log(elements[0].attributes["data-function"].value === "testMe" ? "funciona" : "mierder")
+
+//* opcion 2. Si no supieramos en que elementos tienen ese attributo
+
+const elements = Array.from(document.body.children)
+const withAttribute = []
+
+elements.forEach(element => {
+  // element.attributes["data-function"].value === "testMe" ? "funciona" : "mierder"
+  if (element.hasAttribute("data-function")) {
+    withAttribute.push(element)
+  }
+})
+
+console.log(withAttribute)
 
 //? 1.6 Usa querySelector para mostrar por consola el 3 personaje con el atributo 
 //? data-function="testMe"
