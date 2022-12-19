@@ -55,3 +55,10 @@ console.log(secondDiv)
 document.body.insertBefore(pInTheMiddle ,secondDiv)
 
 //? 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
+
+const arrayDivs = Array.from(document.querySelectorAll("div.fn-insert-here"))
+arrayDivs.forEach(d => {
+  const newP = document.createElement("p")
+  newP.textContent = 'Voy dentro!'
+  d.appendChild(newP)
+})
