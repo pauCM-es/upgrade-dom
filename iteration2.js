@@ -25,7 +25,18 @@ const h2$$ = document.querySelector("h2.fn-insert-here")
 h2$$.textContent = "Wubba Lubba dub dub"
 
 //? 2.6 Basandote en el siguiente array crea una lista ul > li con los textos del array.
-//? const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
+
+const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
+
+const newUl = document.createElement("ul")
+for (let i = 0; i < apps.length; i++) {
+  let text = apps[i]
+  const newLi = document.createElement("li")
+  newLi.textContent = text
+  newUl.appendChild(newLi)
+}
+document.body.append(newUl)
+console.log(newUl)
 
 //? 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
 
